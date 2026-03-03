@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDSTONE Creature Simulator Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="p-4 md:p-8">
+    <div class="min-w-[1500px]">
+        <header class="max-w-[1600px] mb-10 flex flex-col md:flex-row justify-between items-center gap-4 mx-auto">
+            <div class="border-l-4 border-red-700 pl-4">
+                <h1 class="text-3xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-red-100 via-red-600 to-yellow-500 italic leading-none drop-shadow-[0_0_15px_rgba(255,0,0,0.4)]">
+                    CREATURE SIMULATOR <span class="text-[10px] font-bold text-red-100 border border-red-600 px-2 py-0.5 rounded ml-2 italic bg-red-950/60">v10.0 PRO</span>
+                </h1>
+                <p class="text-amber-200/40 text-[10px] font-bold uppercase tracking-widest mt-2">Data Precision Edition</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-3 bg-black/60 p-2 rounded-xl border border-[#8a6e54]/50 shadow-[inset_0_2px_10px_rgba(0,0,0,1)]">
+                    <button onclick="window.allClear()" class="relative group overflow-hidden w-32 py-2 rounded-lg transition-all duration-300 border border-blue-500/40 bg-gradient-to-b from-blue-900/30 to-black hover:border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
+                        <span class="relative z-10 text-[11px] font-black text-blue-400 group-hover:text-blue-200 tracking-[0.2em]">CLEAR</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                    </button>
+                    
+                    <button onclick="window.openSaveModal()" class="relative group overflow-hidden w-32 py-2 rounded-lg transition-all duration-300 border border-emerald-500/40 bg-gradient-to-b from-emerald-900/40 to-black hover:border-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]">
+                        <span class="relative z-10 text-[11px] font-black text-emerald-400 group-hover:text-white tracking-[0.2em]">SAVE</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                    </button>
+                </div>
+                <div class="flex gap-2 bg-black/60 p-1.5 rounded-lg border border-[#8a6e54]">
+                    <button onclick="switchTab('sim')" id="tab-btn-sim" class="tab-btn active px-6 py-2 rounded-md text-xs font-black transition-all">SIMULATOR</button>
+                    <button onclick="switchTab('db')" id="tab-btn-db" class="tab-btn px-6 py-2 rounded-md text-xs font-black transition-all">DATABASE</button>
+                    <button onclick="switchTab('eff')" id="tab-btn-eff" class="tab-btn px-6 py-2 rounded-md text-xs font-black transition-all">EFFECTS</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-[1600px] mx-auto">
+            <div id="tab-sim" class="tab-content">
+                <div class="flex items-center gap-2 mb-4 px-2 group relative w-fit cursor-help">
+                    <span class="text-amber-500 text-xs animate-pulse">※</span>
+                    <p class="text-amber-100/50 font-bold text-[11px] tracking-wider border-b border-dashed border-amber-900/50 group-hover:text-amber-200 group-hover:border-amber-500 transition-all">
+                        LR等級に進化させた後の値で計算されます
+                    </p>
+                    <div class="absolute top-8 left-0 w-80 p-3 bg-[#1a120c] border border-amber-600 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.8)] opacity-0 group-hover:opacity-100 pointer-events-none transition-all z-[100] transform translate-y-2 group-hover:translate-y-0">
+                        <p class="text-[10px] text-amber-100/80 leading-relaxed font-bold">
+                            本シミュレータは、すべてのクリーチャーをLR等級まで進化させ、最大覚醒が可能になった状態のパッシブ値を基準に算出しています。
+                        </p>
+                    </div>
+                </div>
+                <div id="slots-container" class="w-full"></div>
+            </div>
+
+            <div id="tab-db" class="tab-content hidden">
+                <div class="rs-card p-6 rounded-xl">
+                    <div class="border-b-2 border-amber-700/50 mb-6 pb-2 px-3 bg-amber-950/30 rounded">
+                        <span class="text-yellow-500 font-black text-sm uppercase tracking-tighter">クリーチャー早見表</span>
+                    </div>
+                    <div class="mb-6">
+                        <input type="text" id="db-search" placeholder="検索..." class="w-full bg-black/60 border border-[#8a6e54] rounded-lg p-3 text-sm text-yellow-100 outline-none" oninput="window.renderDatabaseTable(this.value)">
+                    </div>
+                    <div class="overflow-x-auto rounded-lg border border-[#8a6e54]/50">
+                        <table class="w-full text-xs text-left border-collapse bg-black/20">
+                            <thead>
+                                <tr class="text-amber-100 bg-[#2a1b13] border-b-2 border-amber-700/50 select-none">
+                                    <th onclick="window.handleSort('grade')" class="p-3 cursor-pointer">等級 ▲▼</th>
+                                    <th onclick="window.handleSort('name')" class="p-3 cursor-pointer">名前 ▲▼</th>
+                                    <th onclick="window.handleSort('main')" class="p-3 cursor-pointer text-yellow-500">メイン ▲▼</th>
+                                    <th class="p-3">サブ1</th>
+                                    <th class="p-3">サブ2</th>
+                                    <th class="p-3">サブ3</th>
+                                </tr>
+                            </thead>
+                            <tbody id="db-table-body" class="divide-y divide-[#8a6e54]/20"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-eff" class="tab-content hidden">
+                <div class="rs-card p-6 rounded-xl">
+                    <div class="border-b-2 border-amber-700/50 mb-6 pb-2 px-3 bg-amber-950/30 rounded">
+                        <span class="text-yellow-500 font-black text-sm uppercase tracking-tighter">パッシブ詳細データ</span>
+                    </div>
+                    <div class="mb-6">
+                        <input type="text" id="eff-search" placeholder="パッシブ名で検索..." class="w-full bg-black/60 border border-[#8a6e54] rounded-lg p-3 text-sm text-yellow-100 outline-none" oninput="window.renderEffectsTable(this.value)">
+                    </div>
+                    <div class="overflow-x-auto rounded-lg border border-[#8a6e54]/50 max-h-[70vh] overflow-y-auto relative custom-scroll">
+                        <table class="w-max text-[10px] text-left border-collapse bg-[#1a1510]">
+                            <thead class="sticky top-0 z-50">
+                                <tr id="eff-table-header" class="text-amber-100 bg-[#1e1a15] border-b-2 border-[#5e4a37]"></tr>
+                            </thead>
+                            <tbody id="eff-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="save-modal" class="fixed inset-0 z-[2000] hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="rs-card w-full max-w-md p-6 border-t-emerald-500 border-t-4 shadow-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-emerald-400 font-black tracking-widest text-lg uppercase italic">✦ Save Library</h2>
+                <button onclick="window.closeSaveModal()" class="text-amber-100/40 hover:text-white text-xl">✕</button>
+            </div>
+            <div class="mb-6 space-y-2">
+                <p class="text-[10px] text-amber-100/60 uppercase font-bold tracking-widest">New Build Name</p>
+                <div class="flex gap-2">
+                    <input type="text" id="new-save-name" placeholder="構成名を入力..." class="flex-grow bg-black/60 border border-[#8a6e54] rounded p-2 text-sm text-yellow-100 outline-none focus:border-emerald-500">
+                    <button onclick="window.handleNewSave()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded font-black text-xs transition-all">SAVE</button>
+                </div>
+            </div>
+            <div class="border-t border-[#8a6e54]/30 pt-4">
+                <p class="text-[10px] text-amber-100/60 uppercase font-bold tracking-widest mb-3 italic">Saved Library</p>
+                <div id="save-list" class="space-y-2 max-h-[300px] overflow-y-auto custom-scroll pr-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/data_manager.js"></script>
+    <script src="script/ui_renderer.js"></script>
+    <script src="script/persistence_manager.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>

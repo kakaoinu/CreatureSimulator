@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* --- 1. Base --- */
+html, body { height: 100%; margin: 0; }
+body {
+    background-color: #05040a;
+    background-image: 
+        linear-gradient(rgba(5, 4, 10, 0.88), rgba(5, 4, 10, 0.94)), 
+        url('../icon/background.png');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f8f1e9;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+}
+
+/* --- 2. Grades --- */
+.grade-gr { color: #cc0000 !important; }
+.grade-lr { color: #ffd700 !important; }
+.grade-sr { color: #a855f7 !important; }
+.grade-hr { color: #2563eb !important; }
+.grade-r  { color: #84cc16 !important; }
+.grade-n  { color: #cbd5e1 !important; }
+
+.bg-grade-gr { background-color: #cc0000 !important; }
+.bg-grade-lr { background-color: #ffd700 !important; }
+.bg-grade-sr { background-color: #a855f7 !important; }
+.bg-grade-hr { background-color: #2563eb !important; }
+.bg-grade-r  { background-color: #84cc16 !important; }
+.bg-grade-n  { background-color: #cbd5e1 !important; }
+
+/* --- 3. UI Components --- */
+.rs-card {
+    background: rgba(30, 20, 12, 0.95);
+    border: 2px solid #8a6e54;
+    border-radius: 12px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.9);
+}
+.rs-font-lcd { font-family: 'Orbitron', sans-serif; letter-spacing: 0.05em; font-weight: 700; }
+
+.tab-btn { background: rgba(42, 27, 19, 0.8); color: #d4bcad; border: 1px solid #5d4534; cursor: pointer; }
+.tab-btn.active { background: #cc0000; color: #fff; border-color: #ffd700; box-shadow: 0 0 20px rgba(204, 0, 0, 0.6); }
+
+/* --- 4. EFFECTS: Recovered Original Layout & Highlight --- */
+#tab-eff .sticky-col { 
+    position: sticky; 
+    z-index: 40; 
+    background-color: #241c14 !important; 
+    box-shadow: inset -1px 0 0 #4a3b2b; 
+}
+#tab-eff .col-name { left: 0; min-width: 160px; max-width: 160px; color: #f59e0b; font-weight: 900; font-size: 14px; text-align: center; border-right: 2px solid #5e4a37 !important; }
+#tab-eff .col-desc { left: 160px; min-width: 300px; max-width: 300px; color: #d1d5db; font-size: 13px; text-align: left; padding-left: 15px !important; border-right: 3px solid #5e4a37 !important; }
+
+/* 十字ハイライト */
+.row-highlight td { background-color: rgba(245, 158, 11, 0.15) !important; }
+.col-highlight { background-color: rgba(245, 158, 11, 0.15) !important; }
+.val-focus { 
+    background-color: rgba(245, 158, 11, 0.5) !important; 
+    color: #fff !important; 
+    font-weight: 900; 
+}
+
+.val-cell { min-width: 65px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 8px 4px; color: #94a3b8; }
+.val-cell.has-val { color: #fff; }
+.group-separator { border-top: 4px solid #b45309 !important; }
+
+/* Utils */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #5d4534; border-radius: 3px; }
+.custom-scroll { scrollbar-width: thin; }
+.hidden { display: none !important; }

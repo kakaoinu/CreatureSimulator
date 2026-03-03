@@ -1,0 +1,1801 @@
+[
+    {
+      "name": "ブリード火炎犬",
+      "grade": "N",
+      "image": "creature_0000.png",
+      "main": "攻撃力",
+      "subs": ["経験値", "体力吸収"]
+    },
+    {
+      "name": "青の火炎犬",
+      "grade": "N",
+      "image": "creature_0001.png",
+      "main": "ドロップ率",
+      "subs": ["回避率", "ドロップ率"]
+    },
+    {
+      "name": "緑の火炎犬",
+      "grade": "N",
+      "image": "creature_0002.png",
+      "main": "火低下",
+      "subs": ["被ダメージ反射", "火強化"]
+    },
+    {
+      "name": "紫の火炎犬",
+      "grade": "N",
+      "image": "creature_0003.png",
+      "main": "火抵抗力",
+      "subs": ["火強化", "抵抗力低下防止"]
+    },
+    {
+      "name": "灰の火炎犬",
+      "grade": "N",
+      "image": "creature_0004.png",
+      "main": "最大CP",
+      "subs": ["能力値低下防止", "最大体力"]
+    },
+    {
+      "name": "赤の火炎犬",
+      "grade": "N",
+      "image": "creature_0005.png",
+      "main": "攻撃力",
+      "subs": ["攻撃力", "動物型ダメージ"]
+    },
+    {
+      "name": "紫の閃光犬",
+      "grade": "N",
+      "image": "creature_0006.png",
+      "main": "クリティカル確率",
+      "subs": ["クリティカルダメージ", "スキル"]
+    },
+    {
+      "name": "水色の閃光犬",
+      "grade": "N",
+      "image": "creature_0007.png",
+      "main": "最大体力",
+      "subs": ["防御力", "体力吸収"]
+    },
+    {
+      "name": "赤の閃光犬",
+      "grade": "N",
+      "image": "creature_0008.png",
+      "main": "火強化",
+      "subs": ["神獣型ダメージ", "水低下"]
+    },
+    {
+      "name": "青の閃光犬",
+      "grade": "N",
+      "image": "creature_0009.png",
+      "main": "大地抵抗力",
+      "subs": ["クリティカルダメージ減少", "火抵抗力"]
+    },
+    {
+      "name": "変異火炎犬",
+      "grade": "N",
+      "image": "creature_0010.png",
+      "main": "ペット&召喚獣強化",
+      "subs": ["ペット&召喚獣体力", "ペット&召喚獣全てのステータス"]
+    },
+    {
+      "name": "乙女ミニゴースト",
+      "grade": "N",
+      "image": "creature_0011.png",
+      "main": "状態異常抵抗力",
+      "subs": ["ドロップ率", "最大CP"]
+    },
+    {
+      "name": "海ミニゴースト",
+      "grade": "N",
+      "image": "creature_0012.png",
+      "main": "闇低下",
+      "subs": ["全ての属性抵抗", "闇強化"]
+    },
+    {
+      "name": "森ミニゴースト",
+      "grade": "N",
+      "image": "creature_0013.png",
+      "main": "闇抵抗力",
+      "subs": ["闇強化", "闇低下"]
+    },
+    {
+      "name": "崖ミニゴースト",
+      "grade": "N",
+      "image": "creature_0014.png",
+      "main": "攻撃力",
+      "subs": ["被魔法ダメージ吸収", "命中率"]
+    },
+    {
+      "name": "岩ミニゴースト",
+      "grade": "N",
+      "image": "creature_0015.png",
+      "main": "スキル",
+      "subs": ["スキル", "最大CP"]
+    },
+    {
+      "name": "砂漠ミニゴースト",
+      "grade": "N",
+      "image": "creature_0016.png",
+      "main": "回避率",
+      "subs": ["火抵抗力", "移動速度"]
+    },
+    {
+      "name": "滝ミニゴースト",
+      "grade": "N",
+      "image": "creature_0017.png",
+      "main": "闇強化",
+      "subs": ["攻撃速度", "闇低下"]
+    },
+    {
+      "name": "平原ミニゴースト",
+      "grade": "N",
+      "image": "creature_0018.png",
+      "main": "最大体力",
+      "subs": ["クリティカルダメージ減少", "悪魔型ダメージ"]
+    },
+    {
+      "name": "紳士ミニゴースト",
+      "grade": "N",
+      "image": "creature_0019.png",
+      "main": "移動速度",
+      "subs": ["被魔法ダメージ吸収", "攻撃力"]
+    },
+    {
+      "name": "墓地ミニゴースト",
+      "grade": "N",
+      "image": "creature_0020.png",
+      "main": "クリティカル確率",
+      "subs": ["水抵抗力", "クリティカルダメージ"]
+    },
+    {
+      "name": "地下ミニゴースト",
+      "grade": "N",
+      "image": "creature_0021.png",
+      "main": "防御力",
+      "subs": ["闇抵抗力", "被ダメージ反射"]
+    },
+    {
+      "name": "強欲のゴーレム",
+      "grade": "N",
+      "image": "creature_0022.png",
+      "main": "光抵抗力",
+      "subs": ["クリティカル確率", "光低下"]
+    },
+    {
+      "name": "忘却のゴーレム",
+      "grade": "N",
+      "image": "creature_0023.png",
+      "main": "光強化",
+      "subs": ["光強化", "動物型ダメージ"]
+    },
+    {
+      "name": "貪欲のゴーレム",
+      "grade": "N",
+      "image": "creature_0024.png",
+      "main": "回避率",
+      "subs": ["能力値低下防止", "光抵抗力"]
+    },
+    {
+      "name": "祝福のゴーレム",
+      "grade": "N",
+      "image": "creature_0025.png",
+      "main": "攻撃速度",
+      "subs": ["クリティカルダメージ", "防御力"]
+    },
+    {
+      "name": "勇気のゴーレム",
+      "grade": "N",
+      "image": "creature_0026.png",
+      "main": "最大体力",
+      "subs": ["最大体力", "ドロップ率"]
+    },
+    {
+      "name": "正義のゴーレム",
+      "grade": "N",
+      "image": "creature_0027.png",
+      "main": "経験値",
+      "subs": ["大地抵抗力", "被ダメージ反射"]
+    },
+    {
+      "name": "不屈のゴーレム",
+      "grade": "N",
+      "image": "creature_0028.png",
+      "main": "大地抵抗力",
+      "subs": ["攻撃力", "経験値"]
+    },
+    {
+      "name": "幸福のゴーレム",
+      "grade": "N",
+      "image": "creature_0029.png",
+      "main": "ペット&召喚獣強化",
+      "subs": ["ペット&召喚獣全てのステータス", "ペット&召喚獣攻撃力"]
+    },
+    {
+      "name": "希望のゴーレム",
+      "grade": "N",
+      "image": "creature_0030.png",
+      "main": "移動速度",
+      "subs": ["アンデッド型ダメージ", "体力吸収"]
+    },
+    {
+      "name": "憤怒のゴーレム",
+      "grade": "N",
+      "image": "creature_0031.png",
+      "main": "光低下",
+      "subs": ["移動速度", "光強化"]
+    },
+    {
+      "name": "復讐のゴーレム",
+      "grade": "N",
+      "image": "creature_0032.png",
+      "main": "ドロップ率",
+      "subs": ["光抵抗力", "状態異常抵抗力"]
+    },
+    {
+      "name": "レビット",
+      "grade": "N",
+      "image": "creature_0033.png",
+      "main": "水強化",
+      "subs": ["水低下", "アンデッド型ダメージ"]
+    },
+    {
+      "name": "リビット",
+      "grade": "N",
+      "image": "creature_0034.png",
+      "main": "水低下",
+      "subs": ["抵抗力低下防止", "水強化"]
+    },
+    {
+      "name": "ルビット",
+      "grade": "N",
+      "image": "creature_0035.png",
+      "main": "水抵抗力",
+      "subs": ["回避率", "被魔法ダメージ吸収"]
+    },
+    {
+      "name": "ロビット",
+      "grade": "N",
+      "image": "creature_0036.png",
+      "main": "最大体力",
+      "subs": ["防御力", "状態異常抵抗力"]
+    },
+    {
+      "name": "ブビット",
+      "grade": "N",
+      "image": "creature_0037.png",
+      "main": "最大CP",
+      "subs": ["ペット&召喚獣強化", "水抵抗力"]
+    },
+    {
+      "name": "レイット",
+      "grade": "N",
+      "image": "creature_0038.png",
+      "main": "水強化",
+      "subs": ["水低下", "スキルクールタイム減少"]
+    },
+    {
+      "name": "ルイット",
+      "grade": "N",
+      "image": "creature_0039.png",
+      "main": "ペット&召喚獣全てのステータス",
+      "subs": ["ペット&召喚獣体力", "風抵抗力"]
+    },
+    {
+      "name": "ロイット",
+      "grade": "N",
+      "image": "creature_0040.png",
+      "main": "防御力",
+      "subs": ["攻撃速度", "神獣型ダメージ"]
+    },
+    {
+      "name": "ライット",
+      "grade": "N",
+      "image": "creature_0041.png",
+      "main": "スキル",
+      "subs": ["攻撃力", "防御力"]
+    },
+    {
+      "name": "レビント",
+      "grade": "N",
+      "image": "creature_0042.png",
+      "main": "水低下",
+      "subs": ["水強化", "被ダメージCPに変換"]
+    },
+    {
+      "name": "ルビント",
+      "grade": "N",
+      "image": "creature_0043.png",
+      "main": "命中率",
+      "subs": ["クリティカル確率", "闇抵抗力"]
+    },
+    {
+      "name": "花霊アサガオ",
+      "grade": "N",
+      "image": "creature_0044.png",
+      "main": "大地強化",
+      "subs": ["被ダメージCPに変換", "最大CP"]
+    },
+    {
+      "name": "花霊ローズ",
+      "grade": "N",
+      "image": "creature_0045.png",
+      "main": "攻撃力",
+      "subs": ["状態異常抵抗力", "クリティカルダメージ"]
+    },
+    {
+      "name": "花霊スミレ",
+      "grade": "N",
+      "image": "creature_0046.png",
+      "main": "状態異常抵抗力",
+      "subs": ["最大体力", "悪魔型ダメージ"]
+    },
+    {
+      "name": "花霊ベル",
+      "grade": "N",
+      "image": "creature_0047.png",
+      "main": "大地低下",
+      "subs": ["大地強化", "大地抵抗力"]
+    },
+    {
+      "name": "花霊ナノハ",
+      "grade": "N",
+      "image": "creature_0048.png",
+      "main": "風抵抗力",
+      "subs": ["命中率", "全ての属性抵抗"]
+    },
+    {
+      "name": "花霊カスミ",
+      "grade": "N",
+      "image": "creature_0049.png",
+      "main": "被ダメージ反射",
+      "subs": ["ペット&召喚獣全てのステータス", "ペット&召喚獣状態異常抵抗"]
+    },
+    {
+      "name": "花霊ノウゼン",
+      "grade": "N",
+      "image": "creature_0050.png",
+      "main": "風強化",
+      "subs": ["最大CP", "風低下"]
+    },
+    {
+      "name": "花霊ワスレナ",
+      "grade": "N",
+      "image": "creature_0051.png",
+      "main": "攻撃速度",
+      "subs": ["最大体力", "大地低下"]
+    },
+    {
+      "name": "花霊アマドコロ",
+      "grade": "N",
+      "image": "creature_0052.png",
+      "main": "風低下",
+      "subs": ["風抵抗力", "風強化"]
+    },
+    {
+      "name": "花霊ウィロウ",
+      "grade": "N",
+      "image": "creature_0053.png",
+      "main": "経験値",
+      "subs": ["攻撃力", "火抵抗力"]
+    },
+    {
+      "name": "花霊アイリス",
+      "grade": "N",
+      "image": "creature_0054.png",
+      "main": "被魔法ダメージ吸収",
+      "subs": ["風強化", "移動速度"]
+    },
+    {
+      "name": "黄昏のフレア",
+      "grade": "R",
+      "image": "creature_0055.png",
+      "main": "火低下",
+      "subs": ["回避率", "火強化"]
+    },
+    {
+      "name": "堕落のフレア",
+      "grade": "R",
+      "image": "creature_0056.png",
+      "main": "水低下",
+      "subs": ["水強化", "最大CP"]
+    },
+    {
+      "name": "呪いのフレア",
+      "grade": "R",
+      "image": "creature_0057.png",
+      "main": "風低下",
+      "subs": ["全ての属性抵抗", "風強化"]
+    },
+    {
+      "name": "暗闇のフレア",
+      "grade": "R",
+      "image": "creature_0058.png",
+      "main": "水強化",
+      "subs": ["水抵抗力", "水低下"]
+    },
+    {
+      "name": "地獄のフレア",
+      "grade": "R",
+      "image": "creature_0059.png",
+      "main": "状態異常抵抗力",
+      "subs": ["攻撃速度", "悪魔型ダメージ"]
+    },
+    {
+      "name": "ボーンナイト",
+      "grade": "R",
+      "image": "creature_0060.png",
+      "main": "闇抵抗力",
+      "subs": ["最大体力", "防御力"]
+    },
+    {
+      "name": "ボーンウォリアー",
+      "grade": "R",
+      "image": "creature_0061.png",
+      "main": "大地強化",
+      "subs": ["防御力", "大地強化"]
+    },
+    {
+      "name": "ボーンヒーロー",
+      "grade": "R",
+      "image": "creature_0062.png",
+      "main": "闇低下",
+      "subs": ["闇強化", "経験値"]
+    },
+    {
+      "name": "ボーンソルジャー",
+      "grade": "R",
+      "image": "creature_0063.png",
+      "main": "防御力",
+      "subs": ["攻撃力", "被ダメージ反射"]
+    },
+    {
+      "name": "ボーンシーフ",
+      "grade": "R",
+      "image": "creature_0064.png",
+      "main": "闇強化",
+      "subs": ["スキルクールタイム減少", "闇低下"]
+    },
+    {
+      "name": "空色のルジュエ",
+      "grade": "R",
+      "image": "creature_0065.png",
+      "main": "被ダメージ反射",
+      "subs": ["最大体力", "ドロップ率"]
+    },
+    {
+      "name": "血色のルジュエ",
+      "grade": "R",
+      "image": "creature_0066.png",
+      "main": "火強化",
+      "subs": ["火低下", "スキル"]
+    },
+    {
+      "name": "リボンのルジュエ",
+      "grade": "R",
+      "image": "creature_0067.png",
+      "main": "移動速度",
+      "subs": ["クリティカルダメージ", "命中率"]
+    },
+    {
+      "name": "太糸のルジュエ",
+      "grade": "R",
+      "image": "creature_0068.png",
+      "main": "回避率",
+      "subs": ["移動速度", "神獣型ダメージ"]
+    },
+    {
+      "name": "ルジュエ",
+      "grade": "R",
+      "image": "creature_0069.png",
+      "main": "最大CP",
+      "subs": ["ドロップ率", "攻撃速度"]
+    },
+    {
+      "name": "ヴィド",
+      "grade": "R",
+      "image": "creature_0070.png",
+      "main": "大地抵抗力",
+      "subs": ["被ダメージCPに変換", "攻撃力"]
+    },
+    {
+      "name": "モヒカンキャロ",
+      "grade": "R",
+      "image": "creature_0071.png",
+      "main": "ドロップ率",
+      "subs": ["経験値", "クリティカルダメージ減少"]
+    },
+    {
+      "name": "リーゼントキャロ",
+      "grade": "R",
+      "image": "creature_0072.png",
+      "main": "クリティカルダメージ",
+      "subs": ["クリティカル確率", "動物型ダメージ"]
+    },
+    {
+      "name": "アフロキャロ",
+      "grade": "R",
+      "image": "creature_0073.png",
+      "main": "風強化",
+      "subs": ["風低下", "状態異常抵抗力"]
+    },
+    {
+      "name": "ファフ",
+      "grade": "R",
+      "image": "creature_0074.png",
+      "main": "全ての属性抵抗",
+      "subs": ["光強化", "能力値低下防止"]
+    },
+    {
+      "name": "ポフ",
+      "grade": "R",
+      "image": "creature_0075.png",
+      "main": "光低下",
+      "subs": ["アンデッド型ダメージ", "光強化"]
+    },
+    {
+      "name": "パフ",
+      "grade": "R",
+      "image": "creature_0076.png",
+      "main": "火強化",
+      "subs": ["火低下", "火抵抗力"]
+    },
+    {
+      "name": "プフ",
+      "grade": "R",
+      "image": "creature_0077.png",
+      "main": "大地低下",
+      "subs": ["大地抵抗力", "大地強化"]
+    },
+    {
+      "name": "レッドアブソル",
+      "grade": "R",
+      "image": "creature_0078.png",
+      "main": "クリティカル確率",
+      "subs": ["クリティカルダメージ", "全ての属性抵抗"]
+    },
+    {
+      "name": "ブルーアブソル",
+      "grade": "R",
+      "image": "creature_0079.png",
+      "main": "攻撃力",
+      "subs": ["体力吸収", "水抵抗力"]
+    },
+    {
+      "name": "グリーンアブソル",
+      "grade": "R",
+      "image": "creature_0080.png",
+      "main": "大地強化",
+      "subs": ["大地抵抗力", "大地低下"]
+    },
+    {
+      "name": "パープルアブソル",
+      "grade": "R",
+      "image": "creature_0081.png",
+      "main": "防御力",
+      "subs": ["被魔法ダメージ吸収", "被ダメージ反射"]
+    },
+    {
+      "name": "ロードアブソル",
+      "grade": "R",
+      "image": "creature_0082.png",
+      "main": "クリティカル確率",
+      "subs": ["スキル", "火抵抗力"]
+    },
+    {
+      "name": "強靭なヒヨコ戦士",
+      "grade": "R",
+      "image": "creature_0083.png",
+      "main": "攻撃速度",
+      "subs": ["体力吸収", "風抵抗力"]
+    },
+    {
+      "name": "強運のヒヨコ戦士",
+      "grade": "R",
+      "image": "creature_0084.png",
+      "main": "クリティカル確率",
+      "subs": ["最大CP", "攻撃速度"]
+    },
+    {
+      "name": "賢明なヒヨコ戦士",
+      "grade": "R",
+      "image": "creature_0085.png",
+      "main": "光強化",
+      "subs": ["光低下", "アンデッド型ダメージ"]
+    },
+    {
+      "name": "疾風のヒヨコ戦士",
+      "grade": "R",
+      "image": "creature_0086.png",
+      "main": "大地強化",
+      "subs": ["最大体力", "大地低下"]
+    },
+    {
+      "name": "壮健なヒヨコ戦士",
+      "grade": "R",
+      "image": "creature_0087.png",
+      "main": "クリティカルダメージ減少",
+      "subs": ["クリティカル確率", "光抵抗力"]
+    },
+    {
+      "name": "ワイアットピグ",
+      "grade": "R",
+      "image": "creature_0117.png",
+      "main": "最大体力",
+      "subs": ["風抵抗力", "全ての属性抵抗"]
+    },
+    {
+      "name": "コリントピグ",
+      "grade": "R",
+      "image": "creature_0118.png",
+      "main": "火強化",
+      "subs": ["火低下", "スキル"]
+    },
+    {
+      "name": "フィルバートピグ",
+      "grade": "R",
+      "image": "creature_0119.png",
+      "main": "風強化",
+      "subs": ["風低下", "クリティカルダメージ減少"]
+    },
+    {
+      "name": "メイソンピグ",
+      "grade": "R",
+      "image": "creature_0120.png",
+      "main": "ペット&召喚獣体力",
+      "subs": ["ペット&召喚獣状態異常抵抗", "ペット&召喚獣強化"]
+    },
+    {
+      "name": "骸骨仮面バット",
+      "grade": "R",
+      "image": "creature_0123.png",
+      "main": "被ダメージCPに変換",
+      "subs": ["防御力", "抵抗力低下防止"]
+    },
+    {
+      "name": "ピエロ仮面バット",
+      "grade": "R",
+      "image": "creature_0124.png",
+      "main": "命中率",
+      "subs": ["闇強化", "闇低下"]
+    },
+    {
+      "name": "舞台仮面バット",
+      "grade": "R",
+      "image": "creature_0125.png",
+      "main": "状態異常抵抗力",
+      "subs": ["攻撃力", "クリティカルダメージ"]
+    },
+    {
+      "name": "トガリ仮面バット",
+      "grade": "R",
+      "image": "creature_0126.png",
+      "main": "ペット&召喚獣攻撃力",
+      "subs": ["ペット&召喚獣攻撃力", "ペット&召喚獣全てのステータス"]
+    },
+    {
+      "name": "ピンクチビット",
+      "grade": "R",
+      "image": "creature_0135.png",
+      "main": "スキル",
+      "subs": ["火強化", "クリティカル確率"]
+    },
+    {
+      "name": "ブルーチビット",
+      "grade": "R",
+      "image": "creature_0136.png",
+      "main": "最大体力",
+      "subs": ["状態異常抵抗力", "経験値"]
+    },
+    {
+      "name": "グリーンチビット",
+      "grade": "R",
+      "image": "creature_0137.png",
+      "main": "ペット&召喚獣状態異常抵抗",
+      "subs": ["ペット&召喚獣強化", "ペット&召喚獣体力"]
+    },
+    {
+      "name": "オレンジチビット",
+      "grade": "R",
+      "image": "creature_0138.png",
+      "main": "クリティカルダメージ",
+      "subs": ["防御力", "命中率"]
+    },
+    {
+      "name": "花精マリアカラス",
+      "grade": "R",
+      "image": "creature_0141.png",
+      "main": "攻撃力",
+      "subs": ["体力吸収", "状態異常抵抗力"]
+    },
+    {
+      "name": "花精シャルル",
+      "grade": "R",
+      "image": "creature_0142.png",
+      "main": "ペット&召喚獣強化",
+      "subs": ["ペット&召喚獣全てのステータス", "攻撃速度"]
+    },
+    {
+      "name": "花精サンブライト",
+      "grade": "R",
+      "image": "creature_0143.png",
+      "main": "経験値",
+      "subs": ["移動速度", "水低下"]
+    },
+    {
+      "name": "花精ブルームーン",
+      "grade": "R",
+      "image": "creature_0144.png",
+      "main": "スキル",
+      "subs": ["神獣型ダメージ", "体力吸収"]
+    },
+    {
+      "name": "ブラウンモス",
+      "grade": "R",
+      "image": "creature_0145.png",
+      "main": "火抵抗力",
+      "subs": ["攻撃力", "被魔法ダメージ吸収"]
+    },
+    {
+      "name": "バイオレットモス",
+      "grade": "R",
+      "image": "creature_0146.png",
+      "main": "水抵抗力",
+      "subs": ["水強化", "能力値低下防止"]
+    },
+    {
+      "name": "オリーブモス",
+      "grade": "R",
+      "image": "creature_0147.png",
+      "main": "風抵抗力",
+      "subs": ["最大体力", "抵抗力低下防止"]
+    },
+    {
+      "name": "ミュータントモス",
+      "grade": "R",
+      "image": "creature_0148.png",
+      "main": "大地抵抗力",
+      "subs": ["悪魔型ダメージ", "闇抵抗力"]
+    },
+    {
+      "name": "パープルエリーズ",
+      "grade": "R",
+      "image": "creature_0153.png",
+      "main": "クリティカル確率",
+      "subs": ["経験値", "水抵抗力"]
+    },
+    {
+      "name": "ブルーエリーズ",
+      "grade": "R",
+      "image": "creature_0154.png",
+      "main": "光抵抗力",
+      "subs": ["攻撃力", "神獣型ダメージ"]
+    },
+    {
+      "name": "レッドエリーズ",
+      "grade": "R",
+      "image": "creature_0155.png",
+      "main": "ペット&召喚獣攻撃力",
+      "subs": ["ペット&召喚獣状態異常抵抗", "ペット&召喚獣体力"]
+    },
+    {
+      "name": "グリーンエリーズ",
+      "grade": "R",
+      "image": "creature_0156.png",
+      "main": "移動速度",
+      "subs": ["被ダメージ反射", "火抵抗力"]
+    },
+    {
+      "name": "チャンピオンマモ",
+      "grade": "R",
+      "image": "creature_0157.png",
+      "main": "攻撃力",
+      "subs": ["アンデッド型ダメージ", "光強化"]
+    },
+    {
+      "name": "チャンピオンシマ",
+      "grade": "R",
+      "image": "creature_0158.png",
+      "main": "ペット&召喚獣全てのステータス",
+      "subs": ["ペット&召喚獣攻撃力", "ペット&召喚獣体力"]
+    },
+    {
+      "name": "チャンピオンモモ",
+      "grade": "R",
+      "image": "creature_0159.png",
+      "main": "最大体力",
+      "subs": ["闇抵抗力", "体力吸収"]
+    },
+    {
+      "name": "チャンピオンジリ",
+      "grade": "R",
+      "image": "creature_0160.png",
+      "main": "最大CP",
+      "subs": ["クリティカル確率", "ドロップ率"]
+    },
+    {
+      "name": "プリンスリオン",
+      "grade": "R",
+      "image": "creature_0165.png",
+      "main": "スキル",
+      "subs": ["ドロップ率", "回避率"]
+    },
+    {
+      "name": "プリンスラオン",
+      "grade": "R",
+      "image": "creature_0166.png",
+      "main": "被魔法ダメージ吸収",
+      "subs": ["悪魔型ダメージ", "命中率"]
+    },
+    {
+      "name": "プリンスロウン",
+      "grade": "R",
+      "image": "creature_0167.png",
+      "main": "攻撃速度",
+      "subs": ["クリティカルダメージ", "光抵抗力"]
+    },
+    {
+      "name": "プリンスルウン",
+      "grade": "R",
+      "image": "creature_0168.png",
+      "main": "スキル",
+      "subs": ["動物型ダメージ", "経験値"]
+    },
+    {
+      "name": "アスター",
+      "grade": "R",
+      "image": "creature_0169.png",
+      "main": "被魔法ダメージ吸収",
+      "subs": ["大地低下", "攻撃力"]
+    },
+    {
+      "name": "エスター",
+      "grade": "R",
+      "image": "creature_0170.png",
+      "main": "防御力",
+      "subs": ["風強化", "被ダメージCPに変換"]
+    },
+    {
+      "name": "ウスター",
+      "grade": "R",
+      "image": "creature_0171.png",
+      "main": "光強化",
+      "subs": ["動物型ダメージ", "移動速度"]
+    },
+    {
+      "name": "イスター",
+      "grade": "R",
+      "image": "creature_0172.png",
+      "main": "ペット&召喚獣全てのステータス",
+      "subs": ["回避率", "クリティカルダメージ減少"]
+    },
+    {
+      "name": "オローニ",
+      "grade": "R",
+      "image": "creature_0193.png",
+      "main": "火抵抗力",
+      "subs": ["火低下", "ペット&召喚獣攻撃力"]
+    },
+    {
+      "name": "オローナ",
+      "grade": "R",
+      "image": "creature_0194.png",
+      "main": "水抵抗力",
+      "subs": ["水低下", "ペット&召喚獣強化"]
+    },
+    {
+      "name": "オローネ",
+      "grade": "R",
+      "image": "creature_0195.png",
+      "main": "風抵抗力",
+      "subs": ["風低下", "ペット&召喚獣状態異常抵抗"]
+    },
+    {
+      "name": "オローヌ",
+      "grade": "R",
+      "image": "creature_0196.png",
+      "main": "大地抵抗力",
+      "subs": ["大地低下", "ペット&召喚獣体力"]
+    },
+    {
+      "name": "ソードガーディアン",
+      "grade": "R",
+      "image": "creature_0197.png",
+      "main": "防御力",
+      "subs": ["神獣型ダメージ", "被ダメージ反射"]
+    },
+    {
+      "name": "アックスガーディアン",
+      "grade": "R",
+      "image": "creature_0198.png",
+      "main": "最大体力",
+      "subs": ["動物型ダメージ", "最大CP"]
+    },
+    {
+      "name": "ハンマーガーディアン",
+      "grade": "R",
+      "image": "creature_0199.png",
+      "main": "クリティカルダメージ減少",
+      "subs": ["アンデッド型ダメージ", "獲得CP増加"]
+    },
+    {
+      "name": "スピアガーディアン",
+      "grade": "R",
+      "image": "creature_0200.png",
+      "main": "状態異常抵抗力",
+      "subs": ["悪魔型ダメージ", "被ダメージCPに変換"]
+    },
+    {
+      "name": "アウルナイト",
+      "grade": "R",
+      "image": "creature_0211.png",
+      "main": "被ダメージ反射",
+      "subs": ["最大体力", "命中率"]
+    },
+    {
+      "name": "アウルスカウト",
+      "grade": "R",
+      "image": "creature_0212.png",
+      "main": "クリティカル確率",
+      "subs": ["攻撃速度", "回避率"]
+    },
+    {
+      "name": "アウルスコラ",
+      "grade": "R",
+      "image": "creature_0213.png",
+      "main": "経験値",
+      "subs": ["最大CP", "スキル"]
+    },
+    {
+      "name": "アウルバンディット",
+      "grade": "R",
+      "image": "creature_0214.png",
+      "main": "ドロップ率",
+      "subs": ["移動速度", "体力吸収"]
+    },
+    {
+      "name": "ブルーペガサス",
+      "grade": "R",
+      "image": "creature_0249.png",
+      "main": "悪魔型ダメージ",
+      "subs": ["攻撃力", "防御力"]
+    },
+    {
+      "name": "レッドペガサス",
+      "grade": "R",
+      "image": "creature_0250.png",
+      "main": "火低下",
+      "subs": ["魔法攻撃力強化", "火抵抗力"]
+    },
+    {
+      "name": "グリーンペガサス",
+      "grade": "R",
+      "image": "creature_0251.png",
+      "main": "全ての属性抵抗",
+      "subs": ["移動速度", "能力値低下防止"]
+    },
+    {
+      "name": "パープルペガサス",
+      "grade": "R",
+      "image": "creature_0252.png",
+      "main": "攻撃速度",
+      "subs": ["光低下", "最大体力"]
+    },
+    {
+      "name": "コボルト大魔導師",
+      "grade": "HR",
+      "image": "creature_0088.png",
+      "main": "火低下",
+      "subs": ["火強化", "上級魔法攻撃力強化"]
+    },
+    {
+      "name": "ウィッチマゴ",
+      "grade": "HR",
+      "image": "creature_0089.png",
+      "main": "光低下",
+      "subs": ["光強化", "魔法強打"]
+    },
+    {
+      "name": "ドレアス",
+      "grade": "HR",
+      "image": "creature_0090.png",
+      "main": "水低下",
+      "subs": ["水強化", "水抵抗力"]
+    },
+    {
+      "name": "ナイトスピア",
+      "grade": "HR",
+      "image": "creature_0091.png",
+      "main": "アンデッド型ダメージ",
+      "subs": ["上級状態異常抵抗力", "闇抵抗力"]
+    },
+    {
+      "name": "ドベルト",
+      "grade": "HR",
+      "image": "creature_0092.png",
+      "main": "動物型ダメージ",
+      "subs": ["クリティカル確率", "PVP防御力"]
+    },
+    {
+      "name": "タイムシュラット",
+      "grade": "HR",
+      "image": "creature_0093.png",
+      "main": "スキルクールタイム減少",
+      "subs": ["被ダメージ反射", "風抵抗力"]
+    },
+    {
+      "name": "エマティース",
+      "grade": "HR",
+      "image": "creature_0094.png",
+      "main": "大地低下",
+      "subs": ["大地強化", "最大CP"]
+    },
+    {
+      "name": "トゥルイク",
+      "grade": "HR",
+      "image": "creature_0095.png",
+      "main": "悪魔型ダメージ",
+      "subs": ["PVP防御力", "上級攻撃力"]
+    },
+    {
+      "name": "グリフォン",
+      "grade": "HR",
+      "image": "creature_0096.png",
+      "main": "風低下",
+      "subs": ["風強化", "上級最大CP"]
+    },
+    {
+      "name": "マスクグール",
+      "grade": "HR",
+      "image": "creature_0097.png",
+      "main": "闇低下",
+      "subs": ["闇強化", "与魔法ダメージ吸収"]
+    },
+    {
+      "name": "泣き虫ルドルフ",
+      "grade": "HR",
+      "image": "creature_0105.png",
+      "main": "ドロップ率",
+      "subs": ["PVP攻撃力", "命中率"]
+    },
+    {
+      "name": "クリスマスフェアリー",
+      "grade": "HR",
+      "image": "creature_0106.png",
+      "main": "ペット&召喚獣体力",
+      "subs": ["経験値", "ペット&召喚獣強化"]
+    },
+    {
+      "name": "フォクシーテール",
+      "grade": "HR",
+      "image": "creature_0108.png",
+      "main": "経験値",
+      "subs": ["人間型魔法ダメージ", "上級魔法攻撃力強化"]
+    },
+    {
+      "name": "ハウンデブル",
+      "grade": "HR",
+      "image": "creature_0109.png",
+      "main": "被魔法ダメージ吸収",
+      "subs": ["被ダメージCPに変換", "火抵抗力"]
+    },
+    {
+      "name": "ペンギン大佐",
+      "grade": "HR",
+      "image": "creature_0113.png",
+      "main": "回避率",
+      "subs": ["上級防御力", "風抵抗力"]
+    },
+    {
+      "name": "プリンセスルーナ",
+      "grade": "HR",
+      "image": "creature_0114.png",
+      "main": "被魔法ダメージ吸収",
+      "subs": ["人間型ダメージ", "抵抗力低下防止"]
+    },
+    {
+      "name": "クマーン",
+      "grade": "HR",
+      "image": "creature_0121.png",
+      "main": "防御力",
+      "subs": ["強打", "全ての属性抵抗"]
+    },
+    {
+      "name": "見習い魔女リトル",
+      "grade": "HR",
+      "image": "creature_0127.png",
+      "main": "クリティカルダメージ減少",
+      "subs": ["上級体力", "能力値低下防止"]
+    },
+    {
+      "name": "ライカンスロープ",
+      "grade": "HR",
+      "image": "creature_0139.png",
+      "main": "神獣型ダメージ",
+      "subs": ["敵致命打減少", "被ダメージ反射"]
+    },
+    {
+      "name": "キングクレバネット",
+      "grade": "HR",
+      "image": "creature_0149.png",
+      "main": "経験値",
+      "subs": ["体力吸収", "上級攻撃速度"]
+    },
+    {
+      "name": "ガイア",
+      "grade": "HR",
+      "image": "creature_0150.png",
+      "main": "闇低下",
+      "subs": ["魔法強打", "光抵抗力"]
+    },
+    {
+      "name": "トリックスター",
+      "grade": "HR",
+      "image": "creature_0161.png",
+      "main": "状態異常抵抗力",
+      "subs": ["防御力", "人間型ダメージ抵抗"]
+    },
+    {
+      "name": "ドリーマー",
+      "grade": "HR",
+      "image": "creature_0173.png",
+      "main": "命中率",
+      "subs": ["上級攻撃力", "攻撃速度"]
+    },
+    {
+      "name": "ノーマド",
+      "grade": "HR",
+      "image": "creature_0174.png",
+      "main": "回避率",
+      "subs": ["大地抵抗力", "魔法抵抗力低下"]
+    },
+    {
+      "name": "シッティングダイル",
+      "grade": "HR",
+      "image": "creature_0175.png",
+      "main": "攻撃速度",
+      "subs": ["クリティカルダメージ", "回避率"]
+    },
+    {
+      "name": "メラニー",
+      "grade": "HR",
+      "image": "creature_0176.png",
+      "main": "ペット&召喚獣強化",
+      "subs": ["ペット&召喚獣全てのステータス", "最大CP"]
+    },
+    {
+      "name": "シーウォーカー",
+      "grade": "HR",
+      "image": "creature_0177.png",
+      "main": "最大体力",
+      "subs": ["ダブルクリティカルダメージ", "最大体力"]
+    },
+    {
+      "name": "カイザー",
+      "grade": "HR",
+      "image": "creature_0178.png",
+      "main": "スキル",
+      "subs": ["上級状態異常抵抗力", "魔法致命打"]
+    },
+    {
+      "name": "クレア",
+      "grade": "HR",
+      "image": "creature_0179.png",
+      "main": "攻撃力",
+      "subs": ["クリティカルダメージ減少", "ドロップ率"]
+    },
+    {
+      "name": "サキュバスヴェラ",
+      "grade": "HR",
+      "image": "creature_0183.png",
+      "main": "スキル",
+      "subs": ["経験値", "上級スキル"]
+    },
+    {
+      "name": "ヴィーナス",
+      "grade": "HR",
+      "image": "creature_0185.png",
+      "main": "ペット&召喚獣攻撃力",
+      "subs": ["最大体力", "人間型ダメージ"]
+    },
+    {
+      "name": "イフリート",
+      "grade": "HR",
+      "image": "creature_0186.png",
+      "main": "火強化",
+      "subs": ["火抵抗力", "被ダメージCPに変換"]
+    },
+    {
+      "name": "かんがえるさかな",
+      "grade": "HR",
+      "image": "creature_0187.png",
+      "main": "経験値",
+      "subs": ["水抵抗力", "体力吸収"]
+    },
+    {
+      "name": "ブラックウィドー",
+      "grade": "HR",
+      "image": "creature_0201.png",
+      "main": "能力値低下防止",
+      "subs": ["上級魔法攻撃力強化", "ペット&召喚獣魔法致命打確率"]
+    },
+    {
+      "name": "ホワイトレディー",
+      "grade": "HR",
+      "image": "creature_0202.png",
+      "main": "抵抗力低下防止",
+      "subs": ["上級攻撃力", "ペット&召喚獣強打確率"]
+    },
+    {
+      "name": "プチデリン",
+      "grade": "HR",
+      "image": "creature_0205.png",
+      "main": "攻撃力",
+      "subs": ["火抵抗力", "命中率"]
+    },
+    {
+      "name": "エルダーハーミット",
+      "grade": "HR",
+      "image": "creature_0215.png",
+      "main": "全ての属性抵抗",
+      "subs": ["動物型ダメージ", "ペット&召喚獣体力"]
+    },
+    {
+      "name": "タイニーフォックス",
+      "grade": "HR",
+      "image": "creature_0227.png",
+      "main": "クリティカル確率",
+      "subs": ["攻撃力", "悪魔型ダメージ"]
+    },
+    {
+      "name": "リトルロトル",
+      "grade": "HR",
+      "image": "creature_0228.png",
+      "main": "水強化",
+      "subs": ["水低下", "状態異常抵抗力"]
+    },
+    {
+      "name": "ホエーリ",
+      "grade": "HR",
+      "image": "creature_0229.png",
+      "main": "抵抗力低下防止",
+      "subs": ["移動速度", "上級最大CP"]
+    },
+    {
+      "name": "ラリエン",
+      "grade": "HR",
+      "image": "creature_0240.png",
+      "main": "攻撃力",
+      "subs": ["命中率", "クリティカルダメージ"]
+    },
+    {
+      "name": "シュークリーム",
+      "grade": "HR",
+      "image": "creature_0242.png",
+      "main": "ペット&召喚獣状態異常抵抗",
+      "subs": ["ペット&召喚獣強化", "ペット&召喚獣全てのステータス"]
+    },
+    {
+      "name": "セリス",
+      "grade": "HR",
+      "image": "creature_0244.png",
+      "main": "魔法攻撃力強化",
+      "subs": ["スキル", "最大CP"]
+    },
+    {
+      "name": "デクスター",
+      "grade": "HR",
+      "image": "creature_0246.png",
+      "main": "最大体力",
+      "subs": ["防御力", "回避率"]
+    },
+    {
+      "name": "セリウス",
+      "grade": "HR",
+      "image": "creature_0253.png",
+      "main": "大地強化",
+      "subs": ["大地低下", "スキル"]
+    },
+    {
+      "name": "ヒドラゴン",
+      "grade": "HR",
+      "image": "creature_0254.png",
+      "main": "水低下",
+      "subs": ["魔法攻撃力強化", "ペット&召喚獣状態異常抵抗"]
+    },
+    {
+      "name": "ナースヴェラ",
+      "grade": "HR",
+      "image": "creature_0257.png",
+      "main": "最大体力",
+      "subs": ["最大CP", "被ダメージCPに変換"]
+    },
+    {
+      "name": "アティピカル",
+      "grade": "HR",
+      "image": "creature_0263.png",
+      "main": "大地強化",
+      "subs": ["大地低下", "大地抵抗力"]
+    },
+    {
+      "name": "ツッパリフェアリー",
+      "grade": "HR",
+      "image": "creature_0264.png",
+      "main": "ペット&召喚獣全てのステータス",
+      "subs": ["ペット&召喚獣攻撃力", "スキル"]
+    },
+    {
+      "name": "イブニングドレスヴェラ",
+      "grade": "HR",
+      "image": "creature_0265.png",
+      "main": "魔法攻撃力強化",
+      "subs": ["魔法抵抗力低下", "最大CP"]
+    },
+    {
+      "name": "獅子舞レビット",
+      "grade": "HR",
+      "image": "creature_0266.png",
+      "main": "スキル",
+      "subs": ["闇抵抗力", "闇低下"]
+    },
+    {
+      "name": "サンバレビット",
+      "grade": "HR",
+      "image": "creature_0268.png",
+      "main": "ペット&召喚獣体力",
+      "subs": ["ペット&召喚獣状態異常抵抗", "最大CP"]
+    },
+    {
+      "name": "インキュバス",
+      "grade": "SR",
+      "image": "creature_0098.png",
+      "main": "上級スキル",
+      "subs": ["魔法抵抗力低下", "闇強化"]
+    },
+    {
+      "name": "吸血姫",
+      "grade": "SR",
+      "image": "creature_0099.png",
+      "main": "体力吸収",
+      "subs": ["スキル", "上級攻撃力"]
+    },
+    {
+      "name": "アイスクイーン",
+      "grade": "SR",
+      "image": "creature_0100.png",
+      "main": "ペット&召喚獣強化",
+      "subs": ["PVP防御力", "人間型魔法ダメージ"]
+    },
+    {
+      "name": "ラストウィッチ",
+      "grade": "SR",
+      "image": "creature_0101.png",
+      "main": "魔法致命打",
+      "subs": ["与魔法ダメージ吸収", "火強化"]
+    },
+    {
+      "name": "ラミア",
+      "grade": "SR",
+      "image": "creature_0102.png",
+      "main": "クリティカルダメージ",
+      "subs": ["PVP攻撃力", "回避率"]
+    },
+    {
+      "name": "サンタレビット",
+      "grade": "SR",
+      "image": "creature_0107.png",
+      "main": "ドロップ率",
+      "subs": ["強打", "最大体力"]
+    },
+    {
+      "name": "レオフォールド",
+      "grade": "SR",
+      "image": "creature_0110.png",
+      "main": "ペット&召喚獣全てのステータス",
+      "subs": ["PVP防御力", "ペット&召喚獣状態異常抵抗"]
+    },
+    {
+      "name": "メリアス",
+      "grade": "SR",
+      "image": "creature_0111.png",
+      "main": "強打",
+      "subs": ["上級体力", "大地強化"]
+    },
+    {
+      "name": "コモルコクーン",
+      "grade": "SR",
+      "image": "creature_0115.png",
+      "main": "能力値低下防止",
+      "subs": ["人間型ダメージ抵抗", "移動速度"]
+    },
+    {
+      "name": "マートン所長",
+      "grade": "SR",
+      "image": "creature_0116.png",
+      "main": "クリティカル確率",
+      "subs": ["敵致命打減少", "上級攻撃速度"]
+    },
+    {
+      "name": "スペクター",
+      "grade": "SR",
+      "image": "creature_0122.png",
+      "main": "能力値低下防止",
+      "subs": ["上級防御力", "命中率"]
+    },
+    {
+      "name": "パンプキンナイト",
+      "grade": "SR",
+      "image": "creature_0128.png",
+      "main": "上級攻撃速度",
+      "subs": ["上級最大CP", "被ダメージ反射"]
+    },
+    {
+      "name": "アサシン",
+      "grade": "SR",
+      "image": "creature_0129.png",
+      "main": "PVP防御力",
+      "subs": ["攻撃速度", "強打"]
+    },
+    {
+      "name": "アーチャー",
+      "grade": "SR",
+      "image": "creature_0130.png",
+      "main": "上級最大CP",
+      "subs": ["全ての属性抵抗", "経験値"]
+    },
+    {
+      "name": "バーサーカー",
+      "grade": "SR",
+      "image": "creature_0131.png",
+      "main": "被ダメージCPに変換",
+      "subs": ["上級体力", "クリティカルダメージ減少"]
+    },
+    {
+      "name": "ランサー",
+      "grade": "SR",
+      "image": "creature_0132.png",
+      "main": "全ての属性抵抗",
+      "subs": ["ドロップ率", "スキル"]
+    },
+    {
+      "name": "ケンタウロスナイト",
+      "grade": "SR",
+      "image": "creature_0140.png",
+      "main": "上級状態異常抵抗力",
+      "subs": ["上級攻撃力", "上級状態異常抵抗力"]
+    },
+    {
+      "name": "クレセンティ",
+      "grade": "SR",
+      "image": "creature_0151.png",
+      "main": "光低下",
+      "subs": ["上級スキル", "上級最大CP"]
+    },
+    {
+      "name": "オーロラ",
+      "grade": "SR",
+      "image": "creature_0162.png",
+      "main": "闇低下",
+      "subs": ["上級魔法攻撃力強化", "人間型魔法ダメージ"]
+    },
+    {
+      "name": "アレクサンダ",
+      "grade": "SR",
+      "image": "creature_0163.png",
+      "main": "敵致命打減少",
+      "subs": ["攻撃力", "クリティカルダメージ"]
+    },
+    {
+      "name": "マキュリア",
+      "grade": "SR",
+      "image": "creature_0180.png",
+      "main": "水低下",
+      "subs": ["魔法致命打", "水強化"]
+    },
+    {
+      "name": "トワイライト",
+      "grade": "SR",
+      "image": "creature_0181.png",
+      "main": "魔法強打",
+      "subs": ["PVP防御力", "上級最大CP"]
+    },
+    {
+      "name": "ラクネーラ",
+      "grade": "SR",
+      "image": "creature_0184.png",
+      "main": "人間型魔法ダメージ",
+      "subs": ["魔法致命打", "水強化"]
+    },
+    {
+      "name": "橘清音",
+      "grade": "SR",
+      "image": "creature_0189.png",
+      "main": "クリティカル確率",
+      "subs": ["上級攻撃速度", "命中率"]
+    },
+    {
+      "name": "枇々木丈",
+      "grade": "SR",
+      "image": "creature_0190.png",
+      "main": "クリティカルダメージ",
+      "subs": ["上級攻撃力", "最大体力"]
+    },
+    {
+      "name": "宮うつつ",
+      "grade": "SR",
+      "image": "creature_0191.png",
+      "main": "上級最大CP",
+      "subs": ["状態異常抵抗力", "経験値"]
+    },
+    {
+      "name": "爾乃美家累",
+      "grade": "SR",
+      "image": "creature_0192.png",
+      "main": "人間型魔法ダメージ",
+      "subs": ["スキル", "被ダメージCPに変換"]
+    },
+    {
+      "name": "シーカー",
+      "grade": "SR",
+      "image": "creature_0203.png",
+      "main": "PVP防御力",
+      "subs": ["人間型ダメージ抵抗", "被魔法ダメージ吸収"]
+    },
+    {
+      "name": "アマニタマジシャン",
+      "grade": "SR",
+      "image": "creature_0216.png",
+      "main": "ペット&召喚獣魔法致命打確率",
+      "subs": ["状態異常抵抗力", "被ダメージCPに変換"]
+    },
+    {
+      "name": "セイクリッドフォックス",
+      "grade": "SR",
+      "image": "creature_0230.png",
+      "main": "上級魔法攻撃力強化",
+      "subs": ["闇低下", "魔法強打"]
+    },
+    {
+      "name": "ドレカニア",
+      "grade": "SR",
+      "image": "creature_0231.png",
+      "main": "クリティカルダメージ",
+      "subs": ["上級攻撃力", "敵致命打減少"]
+    },
+    {
+      "name": "ホエーザランド",
+      "grade": "SR",
+      "image": "creature_0232.png",
+      "main": "ペット&召喚獣敵致命打減少",
+      "subs": ["ペット&召喚獣攻撃力", "ペット&召喚獣体力"]
+    },
+    {
+      "name": "アルティナ・オライオン",
+      "grade": "SR",
+      "image": "creature_0235.png",
+      "main": "ペット&召喚獣全てのステータス",
+      "subs": ["ペット&召喚獣体力", "防御力"]
+    },
+    {
+      "name": "アリサ・ラインフォルト",
+      "grade": "SR",
+      "image": "creature_0236.png",
+      "main": "上級魔法攻撃力強化",
+      "subs": ["状態異常抵抗力", "最大CP"]
+    },
+    {
+      "name": "ラウラ・Ｓ・アルゼイド",
+      "grade": "SR",
+      "image": "creature_0237.png",
+      "main": "ダブルクリティカルダメージ",
+      "subs": ["上級攻撃速度", "命中率"]
+    },
+    {
+      "name": "スーパースターラリエン",
+      "grade": "SR",
+      "image": "creature_0241.png",
+      "main": "上級攻撃力",
+      "subs": ["命中率", "クリティカルダメージ"]
+    },
+    {
+      "name": "スーパースターシュークリーム",
+      "grade": "SR",
+      "image": "creature_0243.png",
+      "main": "ペット&召喚獣強化",
+      "subs": ["ペット&召喚獣体力", "ペット&召喚獣全てのステータス"]
+    },
+    {
+      "name": "スーパースターセリス",
+      "grade": "SR",
+      "image": "creature_0245.png",
+      "main": "上級魔法攻撃力強化",
+      "subs": ["スキル", "最大CP"]
+    },
+    {
+      "name": "スーパースターデクスター",
+      "grade": "SR",
+      "image": "creature_0247.png",
+      "main": "上級体力",
+      "subs": ["防御力", "回避率"]
+    },
+    {
+      "name": "ハーピー",
+      "grade": "SR",
+      "image": "creature_0255.png",
+      "main": "上級攻撃力",
+      "subs": ["移動速度", "敵致命打減少"]
+    },
+    {
+      "name": "ネメライオン",
+      "grade": "SR",
+      "image": "creature_0258.png",
+      "main": "上級防御力",
+      "subs": ["最大体力", "全ての属性抵抗"]
+    },
+    {
+      "name": "ケレンディア",
+      "grade": "SR",
+      "image": "creature_0259.png",
+      "main": "上級光強化",
+      "subs": ["光低下", "魔法攻撃力強化"]
+    },
+    {
+      "name": "シトリロン",
+      "grade": "SR",
+      "image": "creature_0262.png",
+      "main": "上級体力",
+      "subs": ["経験値", "ドロップ率"]
+    },
+    {
+      "name": "ヴァルキリー",
+      "grade": "LR",
+      "image": "creature_0103.png",
+      "main": "上級攻撃力",
+      "subs": ["敵致命打減少", "上級攻撃速度"]
+    },
+    {
+      "name": "アグレアス",
+      "grade": "LR",
+      "image": "creature_0104.png",
+      "main": "人間型ダメージ",
+      "subs": ["上級体力", "上級防御力"]
+    },
+    {
+      "name": "アビス",
+      "grade": "LR",
+      "image": "creature_0112.png",
+      "main": "人間型ダメージ抵抗",
+      "subs": ["上級状態異常抵抗力", "魔法強打"]
+    },
+    {
+      "name": "セイバー",
+      "grade": "LR",
+      "image": "creature_0133.png",
+      "main": "強打",
+      "subs": ["上級攻撃力", "上級最大CP"]
+    },
+    {
+      "name": "ライダー",
+      "grade": "LR",
+      "image": "creature_0134.png",
+      "main": "魔法強打",
+      "subs": ["与魔法ダメージ吸収", "上級スキル"]
+    },
+    {
+      "name": "グラビティアナ",
+      "grade": "LR",
+      "image": "creature_0152.png",
+      "main": "PVP攻撃力",
+      "subs": ["強打", "ダブルクリティカルダメージ"]
+    },
+    {
+      "name": "タナトス",
+      "grade": "LR",
+      "image": "creature_0164.png",
+      "main": "上級魔法攻撃力強化",
+      "subs": ["魔法致命打", "魔法抵抗力低下"]
+    },
+    {
+      "name": "ハーモニー",
+      "grade": "LR",
+      "image": "creature_0182.png",
+      "main": "与魔法ダメージ吸収",
+      "subs": ["魔法抵抗力低下", "上級スキル"]
+    },
+    {
+      "name": "一ノ瀬はじめ",
+      "grade": "LR",
+      "image": "creature_0188.png",
+      "main": "上級防御力",
+      "subs": ["強打", "魔法強打"]
+    },
+    {
+      "name": "ゴールド・エンペラー",
+      "grade": "LR",
+      "image": "creature_0204.png",
+      "main": "最終ダメージ",
+      "subs": ["強打", "上級状態異常抵抗力"]
+    },
+    {
+      "name": "ダークネスネビュラ",
+      "grade": "LR",
+      "image": "creature_0217.png",
+      "main": "人間型魔法ダメージ",
+      "subs": ["上級スキル", "上級状態異常抵抗力"]
+    },
+    {
+      "name": "ワンインオール",
+      "grade": "LR",
+      "image": "creature_0218.png",
+      "main": "魔法致命打",
+      "subs": ["魔法強打", "与魔法ダメージ吸収"]
+    },
+    {
+      "name": "プチランサー",
+      "grade": "LR",
+      "image": "creature_0233.png",
+      "main": "ダブルクリティカルダメージ",
+      "subs": ["人間型ダメージ", "上級攻撃速度"]
+    },
+    {
+      "name": "プチウィザード",
+      "grade": "LR",
+      "image": "creature_0234.png",
+      "main": "魔法抵抗力低下",
+      "subs": ["人間型魔法ダメージ", "魔法致命打"]
+    },
+    {
+      "name": "リィン・シュバルツァー",
+      "grade": "LR",
+      "image": "creature_0238.png",
+      "main": "ダブルクリティカルダメージ",
+      "subs": ["上級攻撃力", "上級防御力"]
+    },
+    {
+      "name": "クロウ・アームブラスト",
+      "grade": "LR",
+      "image": "creature_0239.png",
+      "main": "上級魔法攻撃力強化",
+      "subs": ["魔法抵抗力低下", "魔法強打"]
+    },
+    {
+      "name": "クレティオン",
+      "grade": "LR",
+      "image": "creature_0256.png",
+      "main": "敵致命打減少",
+      "subs": ["人間型ダメージ抵抗", "PVP攻撃力"]
+    },
+    {
+      "name": "プチシュラグ",
+      "grade": "LR",
+      "image": "creature_0260.png",
+      "main": "上級物理強打ダメージ",
+      "subs": ["上級攻撃速度", "上級攻撃力"]
+    },
+    {
+      "name": "プチファルコン",
+      "grade": "LR",
+      "image": "creature_0261.png",
+      "main": "上級ペット&召喚獣最終ダメージ",
+      "subs": ["上級スキル", "上級体力"]
+    },
+    {
+      "name": "ルミエール",
+      "grade": "GR",
+      "image": "creature_0269.png",
+      "main": "ダブルクリティカルダメージ",
+      "subs": ["敵致命打減少", "上級防御力", "人間型ダメージ"]
+    },
+    {
+      "name": "ダイン",
+      "grade": "GR",
+      "image": "creature_0270.png",
+      "main": "魔法強打",
+      "subs": ["最終ダメージ", "上級スキル", "人間型魔法ダメージ"]
+    },
+    {
+      "name": "プロパゴス",
+      "grade": "GR",
+      "image": "creature_0271.png",
+      "main": "上級ペット&召喚獣最終ダメージ",
+      "subs": ["上級体力", "上級スキル", "PVP防御力"]
+    }
+  ]
