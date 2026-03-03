@@ -13,23 +13,21 @@ window.switchTab = (target) => {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(`tab-btn-${target}`).classList.add('active');
     
-    if (target === 'db') window.renderDatabaseTable();
+    // 【この 1 行を追加するだけ】
+    if (target === 'db') window.renderDatabaseTable(""); 
+    
     if (target === 'eff') {
-        window.renderEffectsTable();
+        window.renderEffectsTable("");
         window.setupTableHighlighting();
     }
 };
-
+/**
+ * Main App Controller (v26.0 - Snap Position & Height Locked)
+ */
 window.initApp = () => {
     const container = document.getElementById("slots-container");
     if (!container) return;
 
-    // 外枠に十分な下部余白を追加（数値はお好みで調整可能です）
-    // これにより、4つ目のスロットのさらに下までスクロールできるようになります
-    container.style.paddingBottom = "200px"; 
-
-    // サマリーの位置指定は「以前の動作していたコード」をそのまま維持します
-    // left: calc(100% + 40px) により、メインスロットの右側に吸着します
     container.innerHTML = `
         <div style="position: relative; display: flex; flex-direction: column; gap: 32px; width: fit-content;">
             
@@ -40,13 +38,14 @@ window.initApp = () => {
             `).join('')}
 
             <div id="summary-container" 
-                 style="position: absolute; top: 0; left: calc(100% + 40px); width: 340px; height: 100%; z-index: 1000; display: flex; flex-direction: column;" 
+                 style="position: absolute; top: 0; left: calc(100% + 40px); width: 340px; height: 380px; z-index: 1000; display: flex; flex-direction: column;" 
                  class="rounded-2xl border-2 border-yellow-600 bg-[#0c0c0c] shadow-2xl border-t-yellow-400">
                 
                 <div id="summary-header" style="flex: 0 0 auto; padding: 16px 20px; background: rgba(0,0,0,0.5); border-bottom: 1px solid rgba(255,215,0,0.1);" class="rounded-t-2xl">
-                    <span class="text-[11px] font-black text-yellow-400 uppercase tracking-widest">✦ Passive Summary</span>
+                    <span class="text-[11px] font-black text-yellow-400 uppercase tracking-widest drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]">✦ Passive Summary</span>
                 </div>
-                <div id="summary-area" style="flex: 1 1 auto; padding: 24px; overflow-y: auto;" class="custom-scroll"></div>
+
+                <div id="summary-area" style="flex: 1 1 auto; padding: 20px; overflow-y: auto;" class="custom-scroll"></div>
             </div>
         </div>`;
     

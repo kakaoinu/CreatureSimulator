@@ -105,14 +105,26 @@ window.renderSummary = (totals) => {
 
 window.renderDatabaseTable = (filterText = "") => {
     const tbody = document.getElementById("db-table-body"); if (!tbody) return;
+    if (!window.currentSort) {
+        window.currentSort = { key: "grade", asc: false };
+    }
     const term = filterText.toLowerCase();
     let sortedData = [...creatureData];
     const gradeWeight = { "GR": 5, "LR": 4, "SR": 3, "HR": 2, "R": 1, "N": 0 };
     sortedData.sort((a, b) => {
-        let valA = a[window.currentSort.key] || ""; let valB = b[window.currentSort.key] || "";
-        if (window.currentSort.key === 'grade') { valA = gradeWeight[valA] || 0; valB = gradeWeight[valB] || 0; }
-        if (valA < valB) return window.currentSort.asc ? -1 : 1;
-        if (valA > valB) return window.currentSort.asc ? 1 : -1;
+        const sortKey = window.currentSort?.key || "grade";
+        const asc = window.currentSort?.asc ?? false;
+    
+        let valA = a?.[sortKey] ?? "";
+        let valB = b?.[sortKey] ?? "";
+    
+        if (sortKey === 'grade') {
+            valA = gradeWeight[valA] || 0;
+            valB = gradeWeight[valB] || 0;
+        }
+    
+        if (valA < valB) return asc ? -1 : 1;
+        if (valA > valB) return asc ? 1 : -1;
         return 0;
     });
     const filtered = sortedData.filter(c => (c.name||"").toLowerCase().includes(term) || (c.main||"").toLowerCase().includes(term) || (c.subs && c.subs.some(s => s.toLowerCase().includes(term))));
@@ -165,4 +177,28 @@ window.setupTableHighlighting = () => {
         tbody.querySelectorAll('tr').forEach(tr => tr.classList.remove('row-highlight'));
         table.querySelectorAll('.col-highlight, .val-focus').forEach(el => el.classList.remove('col-highlight', 'val-focus'));
     });
+};
+
+/**
+ * DATABASE ソート実行関数
+ */
+window.handleSort = (key) => {
+    // 1. ソート状態の更新
+    if (!window.currentSort) {
+        window.currentSort = { key: "grade", asc: false };
+    }
+
+    if (window.currentSort.key === key) {
+        // 同じキーなら昇順/降順を反転
+        window.currentSort.asc = !window.currentSort.asc;
+    } else {
+        // 新しいキーならそのキーで降順（または昇順）に設定
+        window.currentSort.key = key;
+        window.currentSort.asc = (key === 'name'); // 名前は昇順、それ以外は重い順（降順）
+    }
+
+    // 2. 現在の検索窓の値を保持して再描画
+    const searchInput = document.getElementById('db-search');
+    const term = searchInput ? searchInput.value : "";
+    window.renderDatabaseTable(term);
 };
