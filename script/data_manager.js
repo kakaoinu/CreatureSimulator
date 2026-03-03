@@ -46,24 +46,35 @@ window.calcRowWithAwake = (pName, grade, trans, isMainPassive, awakeVal) => {
         }
     }
 
-    // --- 超越ボーナスの算出 (修正箇所) ---
     let transVal = 0;
     const tLv = parseInt(trans) || 0;
-
+    
     if (grade === "SR") {
-        // SR専用ロジック
+        // SR：既存ロジックを維持
         if (isMainPassive) {
             if (tLv === 4) transVal = 5;
             else if (tLv === 5) transVal = 6;
-            else transVal = 0; // 0~3は0
         } else {
             if (tLv === 4 || tLv === 5) transVal = 4;
-            else transVal = 0; // 0~3は0
         }
-    } else if (grade === "LR" || grade === "GR") {
-        // LR/GRロジック (従来通り)
-        const tBonus = isMainPassive ? 10 : 5;
-        transVal = tLv * tBonus;
+    } else if (grade === "LR") {
+        // LR：レベルごとの個別設定
+        if (isMainPassive) {
+            const lrMain = { 1: 5, 2: 6, 3: 7, 4: 9, 5: 10 };
+            transVal = lrMain[tLv] || 0;
+        } else {
+            const lrSub = { 1: 4, 2: 4, 3: 5, 4: 6, 5: 8 };
+            transVal = lrSub[tLv] || 0;
+        }
+    } else if (grade === "GR") {
+        // GR：レベルごとの個別設定
+        if (isMainPassive) {
+            // メインは全レベル 0
+            transVal = 0;
+        } else {
+            const grSub = { 1: 5, 2: 6, 3: 7, 4: 8, 5: 10 };
+            transVal = grSub[tLv] || 0;
+        }
     } else {
         // N, R, HR は超越なし
         transVal = 0;
