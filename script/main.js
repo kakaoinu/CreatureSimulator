@@ -24,72 +24,35 @@ window.initApp = () => {
     const container = document.getElementById("slots-container");
     if (!container) return;
 
-    if (typeof selections === 'undefined' || !selections) {
-        window.selections = [
-            { name: "", grade: "", trans: 0, mainP: "", subs: ["", "", ""], awakeLvs: { MAIN: 0, SUB1: 0, SUB2: 0, SUB3: 0 } },
-            { name: "", grade: "", trans: 0, mainP: "", subs: ["", "", ""], awakeLvs: { MAIN: 0, SUB1: 0, SUB2: 0, SUB3: 0 } },
-            { name: "", grade: "", trans: 0, mainP: "", subs: ["", "", ""], awakeLvs: { MAIN: 0, SUB1: 0, SUB2: 0, SUB3: 0 } },
-            { name: "", grade: "", trans: 0, mainP: "", subs: ["", "", ""], awakeLvs: { MAIN: 0, SUB1: 0, SUB2: 0, SUB3: 0 } }
-        ];
-    }
-    
+    // 外枠に十分な下部余白を追加（数値はお好みで調整可能です）
+    // これにより、4つ目のスロットのさらに下までスクロールできるようになります
+    container.style.paddingBottom = "200px"; 
+
+    // サマリーの位置指定は「以前の動作していたコード」をそのまま維持します
+    // left: calc(100% + 40px) により、メインスロットの右側に吸着します
     container.innerHTML = `
-        <div style="display: flex; flex-direction: column; width: 100%; gap: 32px; align-items: flex-start; padding-right: 400px;">
-            ${[0, 1, 2, 3].map(i => `
-                <div id="slot-ui-${i}" style="width: fit-content; min-width: 440px;" class="rounded-2xl border-2 border-[#8a6e54] bg-[#1a120c] p-8 shadow-[0_40px_80px_rgba(0,0,0,1)] border-t-[#b38b6d]">
-                    <div id="slot-content-${i}" style="display: flex; flex-direction: row; align-items: stretch; gap: 64px;"></div>
+        <div style="position: relative; display: flex; flex-direction: column; gap: 32px; width: fit-content;">
+            
+            ${[0,1,2,3].map(i => `
+                <div id="slot-ui-${i}" style="width: fit-content; min-width: 440px;" class="rounded-2xl border-2 border-[#5d4534] bg-[#0c0c0c] p-8 shadow-2xl border-t-[#8a6e54]/50">
+                    <div id="slot-content-${i}" style="display: flex; flex-direction: row; gap: 64px;"></div>
                 </div>
             `).join('')}
-        </div>
-        
-        <div id="summary-container" style="position: fixed; top: 160px; right: 40px; width: 340px; z-index: 1000;" class="rounded-2xl border-2 border-yellow-600 bg-[#1a120c] shadow-[0_50px_150px_rgba(0,0,0,1)] border-t-yellow-400">
-            <div id="summary-header" style="cursor: move; padding: 16px 20px; background: rgba(0,0,0,0.5); border-bottom: 2px solid rgba(255,215,0,0.2);" class="rounded-t-2xl flex justify-between items-center">
-                <span class="text-[11px] font-black text-yellow-400 tracking-[0.3em] uppercase drop-shadow-[0_0_12px_rgba(255,215,0,0.6)]">✦ Passive Summary</span>
-                <div class="flex gap-1.5">
-                    <div class="w-2.5 h-2.5 rounded-full bg-red-700 shadow-[0_0_8px_rgba(255,0,0,1)]"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-600 shadow-[0_0_8px_rgba(255,215,0,1)]"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-cyan-600 shadow-[0_0_8px_rgba(0,255,255,1)]"></div>
+
+            <div id="summary-container" 
+                 style="position: absolute; top: 0; left: calc(100% + 40px); width: 340px; height: 100%; z-index: 1000; display: flex; flex-direction: column;" 
+                 class="rounded-2xl border-2 border-yellow-600 bg-[#0c0c0c] shadow-2xl border-t-yellow-400">
+                
+                <div id="summary-header" style="flex: 0 0 auto; padding: 16px 20px; background: rgba(0,0,0,0.5); border-bottom: 1px solid rgba(255,215,0,0.1);" class="rounded-t-2xl">
+                    <span class="text-[11px] font-black text-yellow-400 uppercase tracking-widest">✦ Passive Summary</span>
                 </div>
+                <div id="summary-area" style="flex: 1 1 auto; padding: 24px; overflow-y: auto;" class="custom-scroll"></div>
             </div>
-            <div id="summary-area" style="padding: 24px; max-height: 70vh; overflow-y: auto;" class="custom-scroll"></div>
-        </div>
-    `;
-
-    for (let i = 0; i < 4; i++) window.renderSlot(i);
+        </div>`;
     
+    for (let i = 0; i < 4; i++) window.renderSlot(i);
     window.autoLoad(); 
-    window.initDraggable();
-};
-
-// ドラッグ範囲の制限ロジック
-window.initDraggable = () => {
-    const el = document.getElementById("summary-container");
-    const header = document.getElementById("summary-header");
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
-    header.onmousedown = (e) => {
-        e.preventDefault();
-        pos3 = e.clientX; pos4 = e.clientY;
-        document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
-        document.onmousemove = (e) => {
-            e.preventDefault();
-            pos1 = pos3 - e.clientX; pos2 = pos4 - e.clientY;
-            pos3 = e.clientX; pos4 = e.clientY;
-
-            let newTop = el.offsetTop - pos2;
-            let newLeft = el.offsetLeft - pos1;
-
-            // 境界制限
-            const maxTop = window.innerHeight - el.offsetHeight;
-            const maxLeft = window.innerWidth - el.offsetWidth;
-            newTop = Math.max(0, Math.min(newTop, maxTop));
-            newLeft = Math.max(0, Math.min(newLeft, maxLeft));
-
-            el.style.top = newTop + "px";
-            el.style.left = newLeft + "px";
-            el.style.right = "auto";
-        };
-    };
+    window.initDraggable = () => {}; 
 };
 
 window.renderSlot = (idx) => {
