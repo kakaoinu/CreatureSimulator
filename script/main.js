@@ -52,7 +52,6 @@ window.initApp = () => {
     
     for (let i = 0; i < 4; i++) window.renderSlot(i);
     window.autoLoad(); 
-    window.initDraggable = () => {}; 
 };
 
 window.renderSlot = (idx) => {
