@@ -1,9 +1,6 @@
 /**
- * UI Renderer (v18.8 - Summary Logic Optimized)
- * 数値が0または存在しない効果はサマリに表示しない条件を追加
+ * UI Renderer (v18.9 - Main Passive Color Sync)
  */
-window.currentSort = { key: 'grade', asc: false };
-
 window.renderPassivePanel = (slotIdx, label, pName, currentAwake, isMainPassive) => {
     const info = passiveMaster.find(m => m.name === pName);
     const grade = selections[slotIdx].grade;
@@ -25,7 +22,9 @@ window.renderPassivePanel = (slotIdx, label, pName, currentAwake, isMainPassive)
 
     const secondRow = label === "MAIN" ? `
         <div class="relative py-1">
-            <div class="text-sm font-black text-white tracking-wider h-8 flex items-center border-b border-white/10 truncate drop-shadow-sm">${pName || "未設定"}</div>
+            <div class="text-sm font-black ${pName ? accentText : 'text-white/20'} tracking-wider h-8 flex items-center border-b border-white/10 truncate drop-shadow-sm">
+                ${pName || "未設定"}
+            </div>
             ${isInvalid ? '<span class="absolute -top-4 right-0 text-red-400 text-[10px] font-black animate-bounce drop-shadow-md bg-black px-1">変換不可</span>' : ''}
         </div>
     ` : `
