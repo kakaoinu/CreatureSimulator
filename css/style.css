@@ -1,19 +1,40 @@
 @charset "UTF-8";
 
 /* --- 1. Base --- */
-html, body { height: 100%; margin: 0; }
 html {
-    background:
-        linear-gradient(#05040ae6, #05040af2),
+    height: 100vh;
+}
+body {
+    /* height: 100% を削除し、中身に応じて伸びるようにする */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #05040a;
+    background-image: 
+        linear-gradient(rgba(5, 4, 10, 0.88), rgba(5, 4, 10, 0.94)), 
         url('../icon/background.png');
+    /* background-size を cover に変更して背景の歪みを防ぐ */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+    color: #f8f1e9;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
 }
 
-body {
-    height: 100vh;
-    overflow: hidden;
+/* スクロールバーのデザインをページ全体に適用 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1a120b;
+}
+::-webkit-scrollbar-thumb {
+    background: #5d4534;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8a6e54;
 }
 
 /* --- 2. Grades --- */
