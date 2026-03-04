@@ -60,7 +60,7 @@ window.renderPassivePanel = (slotIdx, label, pName, currentAwake, isMainPassive)
     const boxBase = "flex items-center justify-center font-black rs-font-lcd text-xl shadow-inner border border-white/5 rounded h-11 bg-black/40";
 
     return `
-        <div style="flex: 0 0 250px;" class="relative p-4 rounded-lg border-l-4 ${borderClass} bg-gradient-to-r ${bgGrad} to-[#05040a] border-y border-r border-[#5d4534]/50 shadow-2xl transition-all">
+        <div style="flex: 0 0 220px;" class="relative p-3 rounded-lg border-l-4 ${borderClass} bg-gradient-to-r ${bgGrad} to-[#05040a] border-y border-r border-[#5d4534]/50 shadow-2xl transition-all">
             <div class="text-[9px] font-black tracking-[0.15em] ${pName ? (isAdv ? 'text-red-400' : 'text-sky-400') : 'text-amber-100/20'} mb-1 uppercase">✦ ${label}</div>
             <div class="mb-3">${secondRow}</div>
             <div class="grid grid-cols-4 gap-1 mb-1 px-1 text-[12px] font-black text-center">
