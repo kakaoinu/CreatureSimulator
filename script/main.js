@@ -81,12 +81,18 @@ window.renderSlot = (idx) => {
                     </div>
                     <div class="flex-grow space-y-2.5 overflow-hidden">
                         <input list="${creatureListId}" 
+                               id="creature-input-${idx}"
                                class="w-full bg-[#05040a] border border-[#8a6e54] p-1.5 rounded-md font-bold text-[11px] outline-none shadow-inner focus:border-yellow-400 ${getGradeClass(sel.grade)}" 
                                placeholder="名前を入力..."
+                               autocomplete="off"
                                value="${sel.name || ''}"
-                               oninput="if(Array.from(document.getElementById('${creatureListId}').options).some(opt => opt.value === this.value)) handleCreatureSelect(${idx}, this.value)"
+                               onmousedown="this.setAttribute('data-val', this.value); this.value='';"
+                               onblur="setTimeout(() => { if(!this.value) this.value = this.getAttribute('data-val') || ''; }, 150)"
+                               oninput="if(Array.from(document.getElementById('${creatureListId}').options).some(opt => opt.value === this.value)) { 
+                                   handleCreatureSelect(${idx}, this.value); 
+                                   this.setAttribute('data-val', this.value); 
+                               }"
                                onchange="handleCreatureSelect(${idx}, this.value)">
-                        
                         <datalist id="${creatureListId}">
                             ${[...creatureData].reverse().map(x => `<option value="${x.name}">${x.grade}：${x.name}</option>`).join('')}
                         </datalist>
@@ -102,6 +108,7 @@ window.renderSlot = (idx) => {
     ui.innerHTML = `${infoHTML}<div style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 20px; align-items: flex-start; padding-top: 8px;" class="h-full">${window.renderPassiveRowsHTML(idx)}</div>`;
     window.calculateAll();
 };
+
 window.renderPassiveRowsHTML = (idx) => {
     const sel = selections[idx]; if (!sel.name) return '<div class="text-amber-200/20 italic text-[11px] py-14 pl-8">召喚待機中</div>';
     let html = "";

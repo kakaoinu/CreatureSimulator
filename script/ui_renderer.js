@@ -1,11 +1,7 @@
 /**
- * UI Renderer (v18.9 - Main Passive Color Sync)
- */
-/**
- * UI Renderer (v19.0 - Searchable Passive Slots)
+ * UI Renderer (v19.2 - Enhanced Visibility & Sorted Passives)
  */
 window.renderPassivePanel = (slotIdx, label, pName, currentAwake, isMainPassive) => {
-    // ... (冒頭のロジックは変更なし)
     const info = passiveMaster.find(m => m.name === pName);
     const grade = selections[slotIdx].grade;
     const maxAwake = window.getMaxAwake(pName, grade, isMainPassive);
@@ -24,8 +20,9 @@ window.renderPassivePanel = (slotIdx, label, pName, currentAwake, isMainPassive)
 
     if (isInvalid) { borderClass = 'border-red-600/50 animate-pulse'; bgGrad = 'from-[#660000]/30 to-[#1a120c]'; }
 
-    // --- 【修正：サブパッシブのみをinput + datalistに変更】 ---
-    const datalistId = `list-${slotIdx}-${label}`;
+    const dlId = `dl-${slotIdx}-${label}`;
+    const subIdx = parseInt(label.replace('SUB','')) - 1;
+
     const secondRow = label === "MAIN" ? `
         <div class="relative py-1">
             <div class="text-sm font-black ${pName ? accentText : 'text-white/20'} tracking-wider h-8 flex items-center border-b border-white/10 truncate drop-shadow-sm">
@@ -35,14 +32,26 @@ window.renderPassivePanel = (slotIdx, label, pName, currentAwake, isMainPassive)
         </div>
     ` : `
         <div class="relative py-1">
-            <input list="${datalistId}" 
-                class="w-full bg-[#05040a] border border-[#5d4534] ${pName ? accentText : 'text-amber-100/20'} p-1.5 rounded font-bold text-[10px] outline-none shadow-inner focus:border-yellow-700" 
-                placeholder="検索または選択..."
+            <input list="${dlId}" 
+                id="input-${slotIdx}-${label}"
+                /* focus:text-white と focus:placeholder-white/30 を追加 */
+                class="w-full bg-[#05040a] border border-[#5d4534] ${pName ? accentText : 'text-amber-100/20'} p-1.5 rounded font-bold text-[10px] outline-none shadow-inner focus:border-yellow-700 focus:text-white focus:placeholder-white/30" 
+                placeholder="検索..."
+                autocomplete="off"
                 value="${pName || ''}"
-                onchange="handleSubSelect(${slotIdx}, ${parseInt(label.replace('SUB',''))-1}, this.value)">
+                onmousedown="this.setAttribute('data-val', this.value); this.value='';"
+                onblur="setTimeout(() => { if(!this.value) this.value = this.getAttribute('data-val') || ''; }, 150)"
+                oninput="const opts = Array.from(document.getElementById('${dlId}').options);
+                         if(opts.some(o => o.value === this.value)) { 
+                             handleSubSelect(${slotIdx}, ${subIdx}, this.value); 
+                             this.setAttribute('data-val', this.value); 
+                         }"
+                onchange="handleSubSelect(${slotIdx}, ${subIdx}, this.value)">
             
-            <datalist id="${datalistId}">
-                ${passiveMaster.map(m => `<option value="${m.name}">${m.type}：${m.name}</option>`).join('')}
+            <datalist id="${dlId}">
+                ${[...passiveMaster]
+                    .sort((a, b) => (a.type === "上級" ? -1 : 1))
+                    .map(m => `<option value="${m.name}">${m.type}：${m.name}</option>`).join('')}
             </datalist>
             ${isInvalid ? '<span class="absolute -top-4 right-0 text-red-500 text-[10px] font-black animate-bounce drop-shadow-md bg-black px-1">変換不可</span>' : ''}
         </div>
