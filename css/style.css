@@ -2,17 +2,16 @@
 
 /* --- 1. Base --- */
 html {
-    height: 100vh;
+    min-height: 100vh;
+    color-scheme: dark;
 }
 body {
-    /* height: 100% を削除し、中身に応じて伸びるようにする */
     min-height: 100vh;
     margin: 0;
     background-color: #05040a;
     background-image: 
         linear-gradient(rgba(5, 4, 10, 0.88), rgba(5, 4, 10, 0.94)), 
         url('../icon/background.png');
-    /* background-size を cover に変更して背景の歪みを防ぐ */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
