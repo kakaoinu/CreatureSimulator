@@ -13,9 +13,37 @@ window.selections = [
 window.getMaxAwake = (pName, grade, isMain) => {
     const info = passiveMaster.find(m => m.name === pName);
     if (!info) return 0;
-    // 覚醒レベル：LR/GRはメイン20/サブ10、それ以下はメイン10/サブ5
-    if (isMain) return (grade === "LR" || grade === "GR") ? 20 : 10;
-    return (grade === "LR" || grade === "GR") ? 10 : 5;
+
+    const isAdvanced = info.type === "上級";
+
+    if (isMain) {
+        // メインパッシブの上限
+        if (grade === "HR") {
+            return isAdvanced ? 6 : 12;
+        }
+        if (grade === "SR") {
+            return isAdvanced ? 8 : 16;
+        }
+        
+        const mainLimits = {
+            "N": 4,
+            "R": 8,
+            "LR": 20,
+            "GR": 20
+        };
+        return mainLimits[grade] || 0;
+    } else {
+        // サブパッシブの上限（一律）
+        const subLimits = {
+            "N": 2,
+            "R": 4,
+            "HR": 6,
+            "SR": 8,
+            "LR": 10,
+            "GR": 10
+        };
+        return subLimits[grade] || 0;
+    }
 };
 
 window.calcRowWithAwake = (pName, grade, trans, isMainPassive, awakeVal) => {
