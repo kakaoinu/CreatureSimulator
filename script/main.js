@@ -59,6 +59,9 @@ window.renderSlot = (idx) => {
     const isMain = (idx === 0);
     const placeholderImg = isMain ? 'creature_main.png' : 'creature_sub.png';
 
+    // クリーチャー検索用のdatalist ID
+    const creatureListId = `creature-dl-${idx}`;
+
     const infoHTML = `
         <div style="flex: 0 0 320px; display: flex; flex-direction: column; justify-content: space-between;" class="h-full">
             <div class="flex flex-col gap-4">
@@ -72,15 +75,22 @@ window.renderSlot = (idx) => {
                     <div class="relative flex-shrink-0">
                         <div class="relative w-20 h-20 bg-[#05040a] rounded-lg border-2 border-amber-900 flex items-center justify-center overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
                             <img src="icon/${placeholderImg}" class="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
-                            ${sel.name ? `<img src="icon/${creatureData.find(x=>x.name===sel.name).image}" class="relative z-10 w-full h-full object-contain p-1 drop-shadow-[0_5px_10px_rgba(0,0,0,0.8)]">` : ''}
+                            ${sel.name && creatureData.find(x=>x.name===sel.name) ? `<img src="icon/${creatureData.find(x=>x.name===sel.name).image}" class="relative z-10 w-full h-full object-contain p-1 drop-shadow-[0_5px_10px_rgba(0,0,0,0.8)]">` : ''}
                         </div>
                         <div class="absolute -top-3 -left-3 bg-gradient-to-br from-yellow-400 to-yellow-700 text-[11px] text-black px-2.5 py-1 font-black z-20 rounded-full shadow-[0_0_15px_rgba(255,215,0,0.6)] border border-white/20 leading-none">+${sel.trans}</div>
                     </div>
                     <div class="flex-grow space-y-2.5 overflow-hidden">
-                        <select class="w-full bg-[#05040a] border border-[#8a6e54] p-1.5 rounded-md font-bold text-[11px] outline-none shadow-inner focus:border-yellow-400 ${getGradeClass(sel.grade)}" onchange="handleCreatureSelect(${idx}, this.value)">
-                            <option value="" class="text-amber-400">-- 召喚 --</option>
-                            ${[...creatureData].reverse().map(x => `<option value="${x.name}" ${sel.name === x.name ? 'selected' : ''} class="bg-[#1a120c] ${getGradeClass(x.grade)}">${x.name}</option>`).join('')}
-                        </select>
+                        <input list="${creatureListId}" 
+                               class="w-full bg-[#05040a] border border-[#8a6e54] p-1.5 rounded-md font-bold text-[11px] outline-none shadow-inner focus:border-yellow-400 ${getGradeClass(sel.grade)}" 
+                               placeholder="名前を入力..."
+                               value="${sel.name || ''}"
+                               oninput="if(Array.from(document.getElementById('${creatureListId}').options).some(opt => opt.value === this.value)) handleCreatureSelect(${idx}, this.value)"
+                               onchange="handleCreatureSelect(${idx}, this.value)">
+                        
+                        <datalist id="${creatureListId}">
+                            ${[...creatureData].reverse().map(x => `<option value="${x.name}">${x.grade}：${x.name}</option>`).join('')}
+                        </datalist>
+
                         <div class="flex items-center justify-between bg-black/60 px-3 py-1.5 rounded-md border border-[#8a6e54]/40">
                             <span class="text-[14px] font-black text-amber-100 uppercase tracking-tighter">超越</span>
                             <input type="number" class="w-12 bg-transparent text-yellow-400 font-black text-center outline-none rs-font-lcd text-2xl drop-shadow-[0_0_8px_rgba(255,215,0,0.5)]" value="${sel.trans}" min="0" max="5" onchange="handleTransChange(${idx}, this.value)">
@@ -92,7 +102,6 @@ window.renderSlot = (idx) => {
     ui.innerHTML = `${infoHTML}<div style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 20px; align-items: flex-start; padding-top: 8px;" class="h-full">${window.renderPassiveRowsHTML(idx)}</div>`;
     window.calculateAll();
 };
-
 window.renderPassiveRowsHTML = (idx) => {
     const sel = selections[idx]; if (!sel.name) return '<div class="text-amber-200/20 italic text-[11px] py-14 pl-8">召喚待機中</div>';
     let html = "";
