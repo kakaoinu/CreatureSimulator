@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="p-4 md:p-8 overflow-x-auto">
-    <div style="width: fit-content;">
+    <main class="w-full h-[calc(100vh-120px)] overflow-hidden">
         <header class="mb-10 flex flex-row justify-between items-start gap-4">
             <div class="border-l-4 border-red-700 pl-4">
                 <h1 class="text-3xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-red-100 via-red-600 to-yellow-500 italic leading-none drop-shadow-[0_0_15px_rgba(255,0,0,0.4)]">
@@ -38,7 +38,7 @@
         </header>
 
         <main class="w-full">
-            <div id="tab-sim" class="tab-content">
+            <div id="tab-sim" class="tab-content h-full overflow-y-auto">
                 <div class="flex items-center gap-2 mb-4 px-2 group relative w-fit cursor-help">
                     <span class="text-amber-500 text-xs animate-pulse">※</span>
                     <p class="text-amber-100/50 font-bold text-[11px] tracking-wider border-b border-dashed border-amber-900/50 group-hover:text-amber-200 group-hover:border-amber-500 transition-all">
@@ -53,7 +53,7 @@
                 <div id="slots-container" class="w-full"></div>
             </div>
 
-            <div id="tab-db" class="tab-content hidden">
+            <div id="tab-db" class="tab-content hidden h-full overflow-y-auto">
                 <div class="rs-card p-6 rounded-xl">
                     <div class="border-b-2 border-amber-700/50 mb-6 pb-2 px-3 bg-amber-950/30 rounded">
                         <span class="text-yellow-500 font-black text-sm uppercase tracking-tighter">クリーチャー早見表</span>
@@ -61,10 +61,10 @@
                     <div class="mb-6">
                         <input type="text" id="db-search" placeholder="検索..." class="w-full bg-black/60 border border-[#8a6e54] rounded-lg p-3 text-sm text-yellow-100 outline-none" oninput="window.renderDatabaseTable(this.value)">
                     </div>
-                    <div class="overflow-x-auto rounded-lg border border-[#8a6e54]/50">
-                        <table class="w-full text-xs text-left border-collapse bg-black/20">
-                            <thead>
-                                <tr class="text-amber-100 bg-[#2a1b13] border-b-2 border-amber-700/50 select-none">
+                    <div class="overflow-x-auto overflow-y-auto max-h-[70vh] rounded-lg border border-[#8a6e54]/50 custom-scroll"></div><div class="overflow-x-auto rounded-lg border border-[#8a6e54]/50 max-h-[70vh] overflow-y-auto custom-scroll">
+                            <table class="w-full text-xs text-left border-collapse bg-black/20">
+                                <thead class="sticky top-0 z-50 bg-[#2a1b13]">
+                                    <tr class="text-amber-100 border-b-2 border-amber-700/50 select-none">
                                     <th onclick="window.handleSort('grade')" class="p-3 cursor-pointer">等級 ▲▼</th>
                                     <th onclick="window.handleSort('name')" class="p-3 cursor-pointer">名前 ▲▼</th>
                                     <th onclick="window.handleSort('main')" class="p-3 cursor-pointer text-yellow-500">メイン ▲▼</th>
@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div id="tab-eff" class="tab-content hidden">
+            <div id="tab-eff" class="tab-content hidden h-full overflow-y-auto">
                 <div class="rs-card p-6 rounded-xl">
                     <div class="border-b-2 border-amber-700/50 mb-6 pb-2 px-3 bg-amber-950/30 rounded">
                         <span class="text-yellow-500 font-black text-sm uppercase tracking-tighter">パッシブ詳細データ</span>
