@@ -90,19 +90,44 @@ window.renderSummary = (totals) => {
         const totalLv = totals[pName];
         const masterInfo = passiveMaster.find(m => m.name === pName);
         const isAdv = masterInfo && masterInfo.type === '上級';
-        const effects = passiveDetails.filter(d => d.name === pName);
         
+        let effects = passiveDetails.filter(d => d.name === pName);
+        if (effects.length === 0) {
+            const sanitize = s => s.replace(/[アイテム\s　]/g, '');
+            effects = passiveDetails.filter(d => sanitize(d.name) === sanitize(pName));
+        }
+        if (effects.length === 0) {
+            effects = passiveDetails.filter(d => d.name.includes(pName) || pName.includes(d.name));
+        }
+
         // 数値が0または該当なしを除外するロジック
         const effectsListHtml = effects.map(eff => {
             const targetLv = Math.min(totalLv, 50);
-            const rawValue = eff.levels[`lv${targetLv}`] || '0';
+            // 【修正箇所】無効な値（ハイフンや0など）を判定する関数
+            const isInvalidVal = (v) => v === undefined || v === null || v === '-' || v === '' || v === '0';
             
-            // 数値が "0" または "-" または空の場合は表示しない
-            if (rawValue === '0' || rawValue === '-' || rawValue === '') return null;
+            let rawValue = eff.levels && eff.levels[`lv${targetLv}`];
+            
+            // 値が無効（ハイフン等）だった場合、カンスト時の最大値を探しに遡る
+            if (eff.levels && isInvalidVal(rawValue)) {
+                for (let i = targetLv; i >= 1; i--) {
+                    if (!isInvalidVal(eff.levels[`lv${i}`])) {
+                        rawValue = eff.levels[`lv${i}`];
+                        break;
+                    }
+                }
+            }
+            
+            rawValue = String(rawValue || '0').trim();
+            
+            // 遡っても結局有効な値がなかった場合は非表示
+            if (isInvalidVal(rawValue)) return null;
 
             let vals = rawValue.includes('/') ? rawValue.split('/') : [rawValue];
             let formattedEffect = eff.effect;
-            const matches = formattedEffect.match(/\[[+-]?\d\]/g);
+            
+            // 小数点を含むプレースホルダーにも対応
+            const matches = formattedEffect.match(/\[[+-]?[\d.]+\]/g);
             
             if (matches) { 
                 matches.forEach(m => { 
