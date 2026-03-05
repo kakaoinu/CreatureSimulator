@@ -22,7 +22,7 @@ window.getMaxAwake = (pName, grade, isMain) => {
             return isAdvanced ? 6 : 12;
         }
         if (grade === "SR") {
-            return isAdvanced ? 8 : 16;
+            return 16;
         }
         
         const mainLimits = {

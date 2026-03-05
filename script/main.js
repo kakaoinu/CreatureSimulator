@@ -159,7 +159,7 @@ window.calculateAll = () => {
                 const max = window.getMaxAwake(pName, sel.grade, isMainPassive);
                 awkInput.max = max; if (parseInt(awkInput.value) > max) { awkInput.value = max; sel.awakeLvs[label] = max; }
             }
-            if (!(idx === 0 && label.includes("SUB") && pName === sel.mainP)) { totals[pName] = (totals[pName] || 0) + res.total; }
+            totals[pName] = (totals[pName] || 0) + res.total;
         };
         processRow(sel.mainP, "MAIN", true);
         sel.subs.forEach((p, sIdx) => processRow(p, "SUB" + (sIdx + 1), false));
